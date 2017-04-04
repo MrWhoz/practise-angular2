@@ -1,37 +1,56 @@
+
 <div>
-  <h1 x-large class="sample-content">Your Content Here</h1>
 
-  <hr>
-
-  <div>
-    For hot module reloading run
-    <pre>npm run start:hmr</pre>
+  <div class="single-page-block">
+    <div class="single-page-block-inner effect-3d-element">
+      <div class="blur-placeholder"><!-- --></div>
+      <div class="single-page-block-form">
+        <h3 class="text-center">
+          <i class="icmn-enter margin-right-10"></i>
+          Login Form
+        </h3>
+        <br />
+        <form id="form-validation" name="form-validation" method="POST">
+          <div class="form-group">
+            <input id="validation-email"
+            class="form-control"
+            placeholder="Email or Username"
+            name="validation[email]"
+            type="text"
+            data-validation="[EMAIL]">
+          </div>
+          <div class="form-group">
+            <input id="validation-password"
+            class="form-control password"
+            name="validation[password]"
+            type="password" data-validation="[L>=6]"
+            data-validation-message="$ must be at least 6 characters"
+            placeholder="Password">
+          </div>
+          <div class="form-group">
+            <a href="javascript: void(0);" class="pull-right">Forgot Password?</a>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="example6" checked>
+                Remember me
+              </label>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary width-150">Sign In</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
-
-  <hr>
-
-  <div>
-    <h4>Local State</h4>
-
-    <form (ngSubmit)="submitState(localState.value)" autocomplete="off">
-
-      <input
-        [value]="localState.value"
-        (input)="localState.value = $event.target.value"
-        placeholder="Submit Local State to App State"
-        autofocus>
-
-      <button>Submit Value</button>
-    </form>
-    <!--
-        <input type="text" [value]="localState.value" (input)="localState.value = $event.target.value" autofocus>
-        Rather than wiring up two-way data-binding ourselves with [value] and (input)
-        we can use Angular's [(ngModel)] syntax
-        <input type="text" name="textInput" [(ngModel)]="localState.value" autofocus>
-      -->
-
-    <pre>this.localState = {{ localState | json }}</pre>
-
+  <div class="single-page-block-footer text-center">
+    <ul class="list-unstyled list-inline">
+      <li><a href="javascript: void(0);">Terms of Use</a></li>
+      <li class="active"><a href="javascript: void(0);">Compliance</a></li>
+      <li><a href="javascript: void(0);">Confidential Information</a></li>
+      <li><a href="javascript: void(0);">Support</a></li>
+      <li><a href="javascript: void(0);">Contacts</a></li>
+    </ul>
   </div>
-
+  <!-- End Login Omega Page -->
 </div>

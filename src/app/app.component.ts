@@ -19,43 +19,34 @@ import { AppState } from './app.service';
     './app.component.css'
   ],
   template: `
-    <nav>
-      <a [routerLink]=" ['./'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        Index
-      </a>
-      <a [routerLink]=" ['./home'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        Home
-      </a>
-      <a [routerLink]=" ['./detail'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        Detail
-      </a>
-      <a [routerLink]=" ['./barrel'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        Barrel
-      </a>
-      <a [routerLink]=" ['./about'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        About
-      </a>
-    </nav>
+  <div class="page-content-inner" style="background-image: url(../assets/img/temp/login/4.jpg)">
 
+    <!-- Login Omega Page -->
+    <div class="single-page-block-header">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="logo">
+            <a href="javascript: history.back();">
+              <img src="../assets/img/logo.png" alt="Clean UI Admin Template" />
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="single-page-block-header-menu">
+            <ul class="list-unstyled list-inline">
+              <li><a href="javascript: history.back();">&larr; Back</a></li>
+              <li class="active"><a href="javascript: void(0);">Login</a></li>
+              <li><a href="javascript: void(0);">About</a></li>
+              <li><a href="javascript: void(0);">Support</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
     <main>
       <router-outlet></router-outlet>
     </main>
-
-    <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
-
-    <footer>
-      <span>WebPack Angular 2 Starter by <a [href]="url">@AngularClass</a></span>
-      <div>
-        <a [href]="url">
-          <img [src]="angularclassLogo" width="25%">
-        </a>
-      </div>
-    </footer>
+    </div>
   `
 })
 export class AppComponent implements OnInit {
