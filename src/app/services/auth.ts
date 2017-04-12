@@ -14,12 +14,14 @@ export class AuthService implements CanActivate {
   }
 
   canActivate(): boolean {
+ 	console.log('--------------------------Get canActivate');
     const canActivate = this.isAuthorized();
     this.onCanActivate(canActivate);
     return canActivate;
   }
 
   onCanActivate(canActivate: boolean) {
+	console.log('------------------------Get onCanActivate');
     if (!canActivate) {
       this.router.navigate(['', 'auth']);
     }
